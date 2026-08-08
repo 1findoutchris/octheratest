@@ -3,13 +3,12 @@
 /* ------------------------------------------------------------------ */
 /* Octhera brand tokens                                               */
 /*                                                                     */
-/* PLACEHOLDER PALETTE — these are NOT Octhera's verified brand        */
-/* colors. The original octhera.com identity could not be recovered   */
-/* from this repository (no prior commits/assets exist) and the live  */
-/* site is unreachable from this environment. Replace the values      */
-/* below with the real palette once brand assets are provided — every */
-/* other token and component derives from these ten variables, so a   */
-/* full re-theme only requires editing this block.                    */
+/* Premium dark + orange gaming theme. Every color across the site    */
+/* (buttons, icons, gradients, borders, glows, charts, cards, hover   */
+/* states, highlighted text) derives from these variables — change a  */
+/* value here and it re-themes the whole site. Orange is primary,     */
+/* with amber/gold as the secondary/soft variations; no cyan, teal,   */
+/* blue or green anywhere in the palette.                             */
 /* ------------------------------------------------------------------ */
 :root {
   --octhera-background: #050609;
@@ -23,11 +22,11 @@
   --octhera-muted: #a6acc4;
   --octhera-muted-dim: #6b7290;
 
-  --octhera-primary: #2ee6c8;
-  --octhera-primary-soft: #7ff5e2;
-  --octhera-secondary: #7c5cff;
-  --octhera-secondary-soft: #a996ff;
-  --octhera-accent: #ffb454;
+  --octhera-primary: #ff6a13;
+  --octhera-primary-soft: #ffa467;
+  --octhera-secondary: #f2a93b;
+  --octhera-secondary-soft: #ffd98c;
+  --octhera-accent: #d9480f;
 }
 
 @theme {

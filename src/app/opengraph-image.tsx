@@ -32,7 +32,7 @@ export default function Image() {
             width: 520,
             height: 520,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(46,230,200,0.35) 0%, rgba(46,230,200,0) 70%)",
+            background: "radial-gradient(circle, rgba(255,106,19,0.35) 0%, rgba(255,106,19,0) 70%)",
             display: "flex",
           }}
         />
@@ -44,7 +44,7 @@ export default function Image() {
             width: 460,
             height: 460,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(124,92,255,0.35) 0%, rgba(124,92,255,0) 70%)",
+            background: "radial-gradient(circle, rgba(242,169,59,0.35) 0%, rgba(242,169,59,0) 70%)",
             display: "flex",
           }}
         />
@@ -54,7 +54,7 @@ export default function Image() {
               width: 56,
               height: 56,
               borderRadius: 14,
-              background: "linear-gradient(135deg, #2ee6c8, #7c5cff)",
+              background: "linear-gradient(135deg, #ff6a13, #f2a93b)",
               display: "flex",
             }}
           />
