@@ -11,11 +11,11 @@ export function SectionKicker({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-ink-soft bg-white/[0.03] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-soft",
+        "inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-soft",
         className
       )}
     >
-      <span className="h-1.5 w-1.5 rounded-full bg-cyan shadow-[0_0_10px_2px_rgba(46,230,200,0.7)]" />
+      <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_2px_rgb(from_var(--octhera-primary)_r_g_b/0.7)]" />
       {children}
     </span>
   );
@@ -28,6 +28,7 @@ export function SectionHeading({
   align = "left",
   className,
   titleClassName,
+  as: Heading = "h2",
 }: {
   kicker?: string;
   title: React.ReactNode;
@@ -35,6 +36,7 @@ export function SectionHeading({
   align?: "left" | "center";
   className?: string;
   titleClassName?: string;
+  as?: "h1" | "h2";
 }) {
   return (
     <div
@@ -50,20 +52,20 @@ export function SectionHeading({
         </Reveal>
       )}
       <Reveal delay={0.08}>
-        <h2
+        <Heading
           className={cn(
-            "text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-frost sm:text-5xl lg:text-6xl",
+            "text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-text sm:text-5xl lg:text-6xl",
             titleClassName
           )}
         >
           {title}
-        </h2>
+        </Heading>
       </Reveal>
       {description && (
         <Reveal delay={0.16}>
           <p
             className={cn(
-              "max-w-2xl text-pretty text-base leading-relaxed text-mist sm:text-lg",
+              "max-w-2xl text-pretty text-base leading-relaxed text-muted sm:text-lg",
               align === "center" && "mx-auto"
             )}
           >

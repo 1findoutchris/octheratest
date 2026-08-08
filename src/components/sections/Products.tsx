@@ -25,17 +25,17 @@ export function Products() {
             <Reveal key={product.title} delay={(i % 4) * 0.06} className={SIZE_CLASSES[product.size]}>
               <div
                 className={cn(
-                  "group relative flex h-full flex-col justify-end overflow-hidden rounded-2xl border border-ink-soft bg-gradient-to-b from-obsidian-3 to-obsidian-2 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-violet/40",
+                  "group relative flex h-full flex-col justify-end overflow-hidden rounded-2xl border border-border bg-gradient-to-b from-surface-strong to-surface p-6 transition-all duration-500 hover:-translate-y-1 hover:border-secondary/40",
                   product.size === "lg" && "p-8"
                 )}
               >
                 <div
                   aria-hidden
-                  className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-gradient-to-br from-violet/25 to-cyan/15 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+                  className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-gradient-to-br from-secondary/25 to-primary/15 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
                 />
                 <product.icon
                   className={cn(
-                    "mb-4 text-mist transition-colors duration-300 group-hover:text-cyan-soft",
+                    "mb-4 text-muted transition-colors duration-300 group-hover:text-primary-soft",
                     product.size === "lg" ? "h-9 w-9" : "h-7 w-7"
                   )}
                   strokeWidth={1.5}
@@ -43,13 +43,13 @@ export function Products() {
                 />
                 <h3
                   className={cn(
-                    "font-display font-bold text-frost",
+                    "font-display font-bold text-text",
                     product.size === "lg" ? "text-2xl sm:text-3xl" : "text-lg"
                   )}
                 >
                   {product.title}
                 </h3>
-                <p className="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-mist opacity-0 transition-all duration-500 group-hover:mt-3 group-hover:max-h-20 group-hover:opacity-100">
+                <p className="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-muted opacity-0 transition-all duration-500 group-hover:mt-3 group-hover:max-h-20 group-hover:opacity-100">
                   {product.description}
                 </p>
               </div>

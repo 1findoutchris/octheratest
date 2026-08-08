@@ -89,7 +89,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-void text-frost">
+      <body className="min-h-full flex flex-col bg-background text-text">
         <Header />
         {children}
         <Footer />

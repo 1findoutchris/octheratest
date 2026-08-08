@@ -6,7 +6,7 @@ import { GLOBAL_CAPABILITIES } from "@/data/global-infrastructure";
 
 export function GlobalInfrastructure() {
   return (
-    <section className="relative overflow-hidden bg-obsidian-2/40 py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-surface/40 py-24 sm:py-32">
       <Container className="flex flex-col gap-14">
         <SectionHeading
           align="center"
@@ -23,7 +23,7 @@ export function GlobalInfrastructure() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           {GLOBAL_CAPABILITIES.map((item, i) => (
             <Reveal key={item} delay={0.15 + i * 0.06}>
-              <span className="rounded-full border border-ink-soft bg-white/[0.02] px-4 py-2 text-sm text-frost/85">
+              <span className="rounded-full border border-border bg-white/[0.02] px-4 py-2 text-sm text-text/85">
                 {item}
               </span>
             </Reveal>

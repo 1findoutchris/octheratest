@@ -27,11 +27,11 @@ export function WhyOcthera() {
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:hidden">
           {ADVANTAGES.map((item, i) => (
             <Reveal key={item.title} delay={(i % 4) * 0.06}>
-              <div className="flex flex-col items-center gap-2.5 rounded-xl border border-ink-soft bg-white/[0.02] p-5 text-center">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-ink-soft bg-white/[0.03] text-cyan-soft">
+              <div className="flex flex-col items-center gap-2.5 rounded-xl border border-border bg-white/[0.02] p-5 text-center">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-white/[0.03] text-primary-soft">
                   <item.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
                 </span>
-                <span className="text-xs font-medium text-frost/90">{item.title}</span>
+                <span className="text-xs font-medium text-text/90">{item.title}</span>
               </div>
             </Reveal>
           ))}

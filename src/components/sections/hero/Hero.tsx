@@ -14,8 +14,8 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16"
     >
       <GridBackground />
-      <GlowOrb color="cyan" className="-left-40 top-10 h-[420px] w-[420px]" />
-      <GlowOrb color="violet" className="-right-32 top-1/3 h-[480px] w-[480px]" />
+      <GlowOrb color="primary" className="-left-40 top-10 h-[420px] w-[420px]" />
+      <GlowOrb color="secondary" className="-right-32 top-1/3 h-[480px] w-[480px]" />
 
       <Container className="relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
         <div className="flex flex-col items-start gap-7">
@@ -31,7 +31,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-balance font-display text-5xl font-extrabold leading-[1.03] tracking-tight text-frost sm:text-6xl lg:text-7xl"
+            className="text-balance font-display text-5xl font-extrabold leading-[1.03] tracking-tight text-text sm:text-6xl lg:text-7xl"
           >
             Powering the
             <br />
@@ -42,7 +42,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-xl text-pretty text-base leading-relaxed text-mist sm:text-lg"
+            className="max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg"
           >
             Build, launch and scale powerful gaming brands with flexible technology,
             premium content and infrastructure designed for modern operators.
@@ -74,7 +74,7 @@ export function Hero() {
 
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-void to-transparent"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
       />
     </section>
   );

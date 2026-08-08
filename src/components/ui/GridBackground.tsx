@@ -14,15 +14,15 @@ export function GridBackground({ className }: { className?: string }) {
 
 export function GlowOrb({
   className,
-  color = "cyan",
+  color = "primary",
 }: {
   className?: string;
-  color?: "cyan" | "violet" | "amber";
+  color?: "primary" | "secondary" | "accent";
 }) {
   const colorMap = {
-    cyan: "bg-cyan",
-    violet: "bg-violet",
-    amber: "bg-amber",
+    primary: "bg-primary",
+    secondary: "bg-secondary",
+    accent: "bg-accent",
   };
   return (
     <div

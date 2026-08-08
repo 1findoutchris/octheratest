@@ -19,13 +19,13 @@ export function GlobalNetwork() {
     <div className="relative mx-auto aspect-[16/10] w-full max-w-4xl">
       <div
         aria-hidden
-        className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-cyan/[0.06] to-violet/[0.06]"
+        className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-primary/[0.06] to-secondary/[0.06]"
       />
       <svg viewBox="0 0 400 240" className="relative h-full w-full overflow-visible" aria-hidden>
         {/* wireframe globe */}
-        <ellipse cx={200} cy={120} rx={170} ry={100} fill="none" stroke="var(--color-ink-soft)" strokeWidth={1} />
+        <ellipse cx={200} cy={120} rx={170} ry={100} fill="none" stroke="var(--color-border)" strokeWidth={1} />
         {MERIDIANS.map((rx) => (
-          <ellipse key={rx} cx={200} cy={120} rx={rx} ry={100} fill="none" stroke="var(--color-ink-soft)" strokeWidth={1} />
+          <ellipse key={rx} cx={200} cy={120} rx={rx} ry={100} fill="none" stroke="var(--color-border)" strokeWidth={1} />
         ))}
         {[-70, -35, 0, 35, 70].map((offsetY) => {
           const ry = 100;
@@ -38,7 +38,7 @@ export function GlobalNetwork() {
               rx={rx}
               ry={6}
               fill="none"
-              stroke="var(--color-ink-soft)"
+              stroke="var(--color-border)"
               strokeWidth={0.6}
               opacity={0.5}
             />
@@ -68,18 +68,18 @@ export function GlobalNetwork() {
         })}
         <defs>
           <linearGradient id="globe-line" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="var(--color-cyan)" />
-            <stop offset="100%" stopColor="var(--color-violet)" />
+            <stop offset="0%" stopColor="var(--color-primary)" />
+            <stop offset="100%" stopColor="var(--color-secondary)" />
           </linearGradient>
         </defs>
 
         {NETWORK_POINTS.map((point, i) => (
           <g key={i} transform={`translate(${(point.x / 100) * 400} ${(point.y / 100) * 240})`}>
-            <circle r={6} fill="var(--color-cyan)" opacity={0.15}>
+            <circle r={6} fill="var(--color-primary)" opacity={0.15}>
               <animate attributeName="r" values="6;14;6" dur="3.2s" repeatCount="indefinite" begin={`${i * 0.3}s`} />
               <animate attributeName="opacity" values="0.25;0;0.25" dur="3.2s" repeatCount="indefinite" begin={`${i * 0.3}s`} />
             </circle>
-            <circle r={2.6} fill="var(--color-cyan-soft)" />
+            <circle r={2.6} fill="var(--color-primary-soft)" />
           </g>
         ))}
       </svg>

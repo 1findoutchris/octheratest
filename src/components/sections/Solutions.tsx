@@ -26,18 +26,18 @@ export function Solutions() {
             <Reveal key={solution.title} delay={(i % 3) * 0.08}>
               <GlowCard>
                 <div className="flex flex-col gap-5">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink-soft bg-white/[0.03] text-cyan-soft transition-colors duration-300 group-hover:border-cyan/40 group-hover:text-cyan">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-white/[0.03] text-primary-soft transition-colors duration-300 group-hover:border-primary/40 group-hover:text-primary">
                     <solution.icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                   </span>
                   <div className="flex flex-col gap-2">
-                    <h3 className="font-display text-xl font-bold text-frost">
+                    <h3 className="font-display text-xl font-bold text-text">
                       {solution.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-mist">{solution.description}</p>
+                    <p className="text-sm leading-relaxed text-muted">{solution.description}</p>
                   </div>
                   <a
                     href="#contact"
-                    className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-soft transition-colors hover:text-cyan"
+                    className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-soft transition-colors hover:text-primary"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

@@ -9,15 +9,15 @@ export function FinalCta() {
   return (
     <section id="contact" className="relative overflow-hidden py-28 sm:py-36">
       <GridBackground className="opacity-40" />
-      <GlowOrb color="cyan" className="left-1/4 top-0 h-[440px] w-[440px]" />
-      <GlowOrb color="violet" className="right-1/4 bottom-0 h-[440px] w-[440px]" />
+      <GlowOrb color="primary" className="left-1/4 top-0 h-[440px] w-[440px]" />
+      <GlowOrb color="secondary" className="right-1/4 bottom-0 h-[440px] w-[440px]" />
       <div
         aria-hidden
-        className="absolute left-1/2 top-1/2 h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full border border-ink-soft/60"
+        className="absolute left-1/2 top-1/2 h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full border border-border/60"
       />
       <div
         aria-hidden
-        className="absolute left-1/2 top-1/2 h-[45vmin] w-[45vmin] -translate-x-1/2 -translate-y-1/2 animate-pulse-soft rounded-full border border-cyan/20"
+        className="absolute left-1/2 top-1/2 h-[45vmin] w-[45vmin] -translate-x-1/2 -translate-y-1/2 animate-pulse-soft rounded-full border border-primary/20"
       />
 
       <Container className="relative flex flex-col items-center gap-8 text-center">
@@ -25,14 +25,14 @@ export function FinalCta() {
           <SectionKicker>Let&rsquo;s Build Together</SectionKicker>
         </Reveal>
         <Reveal delay={0.08}>
-          <h2 className="max-w-3xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-frost sm:text-6xl">
+          <h2 className="max-w-3xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-text sm:text-6xl">
             Ready to Build
             <br />
             <span className="text-gradient-accent">Your Gaming Brand?</span>
           </h2>
         </Reveal>
         <Reveal delay={0.16}>
-          <p className="max-w-xl text-pretty text-base leading-relaxed text-mist sm:text-lg">
+          <p className="max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg">
             Talk to Octhera about the technology behind your next gaming platform.
           </p>
         </Reveal>

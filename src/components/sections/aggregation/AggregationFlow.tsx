@@ -12,10 +12,10 @@ const STAGES = [
 
 function Connector({ delay = 0 }: { delay?: number }) {
   return (
-    <div className="relative mx-2 hidden h-px flex-1 overflow-hidden bg-ink-soft sm:block lg:mx-4">
+    <div className="relative mx-2 hidden h-px flex-1 overflow-hidden bg-border sm:block lg:mx-4">
       <motion.span
         aria-hidden
-        className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-transparent via-cyan to-transparent"
+        className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-transparent via-primary to-transparent"
         animate={{ left: ["-10%", "110%"] }}
         transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay }}
       />
@@ -37,21 +37,21 @@ export function AggregationFlow() {
               <div
                 className={`flex h-16 w-16 items-center justify-center rounded-2xl border ${
                   i === 1
-                    ? "border-cyan/40 bg-gradient-to-br from-cyan/20 to-violet/20 shadow-[0_0_40px_-8px_rgba(46,230,200,0.5)]"
-                    : "border-ink-soft bg-white/[0.03]"
+                    ? "border-primary/40 bg-gradient-to-br from-primary/20 to-secondary/20 shadow-[0_0_40px_-8px_rgb(from_var(--octhera-primary)_r_g_b/0.5)]"
+                    : "border-border bg-white/[0.03]"
                 }`}
               >
                 <stage.icon
-                  className={`h-7 w-7 ${i === 1 ? "text-cyan-soft" : "text-mist"}`}
+                  className={`h-7 w-7 ${i === 1 ? "text-primary-soft" : "text-muted"}`}
                   strokeWidth={1.6}
                   aria-hidden
                 />
               </div>
               <div>
-                <p className="font-display text-sm font-bold text-frost sm:text-base">
+                <p className="font-display text-sm font-bold text-text sm:text-base">
                   {stage.label}
                 </p>
-                <p className="text-xs text-mist">{stage.sub}</p>
+                <p className="text-xs text-muted">{stage.sub}</p>
               </div>
             </div>
             {i < STAGES.length - 1 && <Connector delay={i * 0.4} />}

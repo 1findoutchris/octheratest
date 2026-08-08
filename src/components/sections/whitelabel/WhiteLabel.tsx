@@ -11,8 +11,8 @@ function EquationChip({ children, accent = false }: { children: React.ReactNode;
     <span
       className={
         accent
-          ? "rounded-full bg-gradient-to-r from-cyan to-violet px-4 py-2 text-xs font-bold uppercase tracking-wide text-void"
-          : "rounded-full border border-ink-soft bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-wide text-frost"
+          ? "rounded-full bg-gradient-to-r from-primary to-secondary px-4 py-2 text-xs font-bold uppercase tracking-wide text-background"
+          : "rounded-full border border-border bg-white/[0.03] px-4 py-2 text-xs font-bold uppercase tracking-wide text-text"
       }
     >
       {children}
@@ -29,14 +29,14 @@ export function WhiteLabel() {
             <SectionKicker>White Label &amp; Turnkey</SectionKicker>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-frost sm:text-5xl">
+            <h2 className="text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-text sm:text-5xl">
               Your Brand.
               <br />
               <span className="text-gradient-accent">Our Technology.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
-            <p className="max-w-xl text-pretty text-base leading-relaxed text-mist sm:text-lg">
+            <p className="max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg">
               Launch a gaming platform under your own brand while Octhera provides the
               technology behind the experience.
             </p>
@@ -45,17 +45,17 @@ export function WhiteLabel() {
           <Reveal delay={0.2}>
             <div className="flex flex-wrap items-center gap-2.5">
               <EquationChip>Octhera Technology</EquationChip>
-              <Plus className="h-4 w-4 text-mist" aria-hidden />
+              <Plus className="h-4 w-4 text-muted" aria-hidden />
               <EquationChip>Your Brand</EquationChip>
-              <ArrowRight className="h-4 w-4 text-mist" aria-hidden />
+              <ArrowRight className="h-4 w-4 text-muted" aria-hidden />
               <EquationChip accent>Your Gaming Platform</EquationChip>
             </div>
           </Reveal>
 
           <Reveal delay={0.26} className="grid w-full grid-cols-2 gap-x-4 gap-y-2.5 pt-2 sm:grid-cols-2">
             {WHITE_LABEL_FEATURES.map((feature) => (
-              <div key={feature} className="flex items-center gap-2 text-sm text-frost/85">
-                <Check className="h-4 w-4 shrink-0 text-cyan-soft" aria-hidden />
+              <div key={feature} className="flex items-center gap-2 text-sm text-text/85">
+                <Check className="h-4 w-4 shrink-0 text-primary-soft" aria-hidden />
                 {feature}
               </div>
             ))}

@@ -1,31 +1,52 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/* Octhera design tokens                                              */
+/* Octhera brand tokens                                               */
+/*                                                                     */
+/* PLACEHOLDER PALETTE — these are NOT Octhera's verified brand        */
+/* colors. The original octhera.com identity could not be recovered   */
+/* from this repository (no prior commits/assets exist) and the live  */
+/* site is unreachable from this environment. Replace the values      */
+/* below with the real palette once brand assets are provided — every */
+/* other token and component derives from these ten variables, so a   */
+/* full re-theme only requires editing this block.                    */
 /* ------------------------------------------------------------------ */
+:root {
+  --octhera-background: #050609;
+  --octhera-surface-1: #0a0c12;
+  --octhera-surface: #0e1119;
+  --octhera-surface-strong: #141826;
+  --octhera-border: #262c40;
+  --octhera-border-strong: #1e2333;
+
+  --octhera-text: #f4f5fa;
+  --octhera-muted: #a6acc4;
+  --octhera-muted-dim: #6b7290;
+
+  --octhera-primary: #2ee6c8;
+  --octhera-primary-soft: #7ff5e2;
+  --octhera-secondary: #7c5cff;
+  --octhera-secondary-soft: #a996ff;
+  --octhera-accent: #ffb454;
+}
+
 @theme {
-  /* base surfaces */
-  --color-void: #050609;
-  --color-obsidian: #0a0c12;
-  --color-obsidian-2: #0e1119;
-  --color-obsidian-3: #141826;
-  --color-ink: #1e2333;
-  --color-ink-soft: #262c40;
+  --color-background: var(--octhera-background);
+  --color-surface-1: var(--octhera-surface-1);
+  --color-surface: var(--octhera-surface);
+  --color-surface-strong: var(--octhera-surface-strong);
+  --color-border: var(--octhera-border);
+  --color-border-strong: var(--octhera-border-strong);
 
-  /* text */
-  --color-frost: #f4f5fa;
-  --color-mist: #a6acc4;
-  --color-mist-dim: #6b7290;
+  --color-text: var(--octhera-text);
+  --color-muted: var(--octhera-muted);
+  --color-muted-dim: var(--octhera-muted-dim);
 
-  /* brand accents */
-  --color-cyan: #2ee6c8;
-  --color-cyan-soft: #7ff5e2;
-  --color-violet: #7c5cff;
-  --color-violet-soft: #a996ff;
-  --color-amber: #ffb454;
-
-  --color-background: var(--color-void);
-  --color-foreground: var(--color-frost);
+  --color-primary: var(--octhera-primary);
+  --color-primary-soft: var(--octhera-primary-soft);
+  --color-secondary: var(--octhera-secondary);
+  --color-secondary-soft: var(--octhera-secondary-soft);
+  --color-accent: var(--octhera-accent);
 
   --font-display: var(--font-manrope);
   --font-sans: var(--font-inter);
@@ -46,8 +67,8 @@ section[id] {
 }
 
 body {
-  background: var(--color-void);
-  color: var(--color-frost);
+  background: var(--octhera-background);
+  color: var(--octhera-text);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
@@ -57,8 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  background: var(--color-cyan);
-  color: var(--color-void);
+  background: var(--octhera-primary);
+  color: var(--octhera-background);
 }
 
 /* ------------------------------------------------------------------ */
@@ -66,57 +87,57 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------------------------------------------ */
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(100deg, var(--color-frost) 15%, var(--color-cyan-soft) 55%, var(--color-violet-soft) 85%);
+    background: linear-gradient(100deg, var(--octhera-text) 15%, var(--octhera-primary-soft) 55%, var(--octhera-secondary-soft) 85%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .text-gradient-accent {
-    background: linear-gradient(100deg, var(--color-cyan) 10%, var(--color-violet) 90%);
+    background: linear-gradient(100deg, var(--octhera-primary) 10%, var(--octhera-secondary) 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .glass-panel {
-    background: color-mix(in srgb, var(--color-obsidian-2) 65%, transparent);
+    background: color-mix(in srgb, var(--octhera-surface) 65%, transparent);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
-    border: 1px solid color-mix(in srgb, var(--color-frost) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--octhera-text) 8%, transparent);
   }
 
   .glass-nav {
-    background: color-mix(in srgb, var(--color-void) 62%, transparent);
+    background: color-mix(in srgb, var(--octhera-background) 62%, transparent);
     backdrop-filter: blur(18px) saturate(160%);
     -webkit-backdrop-filter: blur(18px) saturate(160%);
   }
 
   .grid-pattern {
     background-image:
-      linear-gradient(color-mix(in srgb, var(--color-frost) 6%, transparent) 1px, transparent 1px),
-      linear-gradient(90deg, color-mix(in srgb, var(--color-frost) 6%, transparent) 1px, transparent 1px);
+      linear-gradient(color-mix(in srgb, var(--octhera-text) 6%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--octhera-text) 6%, transparent) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
   .dot-pattern {
-    background-image: radial-gradient(color-mix(in srgb, var(--color-frost) 14%, transparent) 1px, transparent 1px);
+    background-image: radial-gradient(color-mix(in srgb, var(--octhera-text) 14%, transparent) 1px, transparent 1px);
     background-size: 22px 22px;
   }
 
-  .glow-cyan {
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-cyan) 30%, transparent), 0 20px 60px -20px color-mix(in srgb, var(--color-cyan) 45%, transparent);
+  .glow-primary {
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--octhera-primary) 30%, transparent), 0 20px 60px -20px color-mix(in srgb, var(--octhera-primary) 45%, transparent);
   }
 
-  .glow-violet {
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-violet) 30%, transparent), 0 20px 60px -20px color-mix(in srgb, var(--color-violet) 55%, transparent);
+  .glow-secondary {
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--octhera-secondary) 30%, transparent), 0 20px 60px -20px color-mix(in srgb, var(--octhera-secondary) 55%, transparent);
   }
 
   .border-gradient {
     border: 1px solid transparent;
     background:
-      linear-gradient(var(--color-obsidian-2), var(--color-obsidian-2)) padding-box,
-      linear-gradient(135deg, color-mix(in srgb, var(--color-cyan) 55%, transparent), color-mix(in srgb, var(--color-violet) 55%, transparent)) border-box;
+      linear-gradient(var(--octhera-surface), var(--octhera-surface)) padding-box,
+      linear-gradient(135deg, color-mix(in srgb, var(--octhera-primary) 55%, transparent), color-mix(in srgb, var(--octhera-secondary) 55%, transparent)) border-box;
   }
 
   .mask-fade-x {

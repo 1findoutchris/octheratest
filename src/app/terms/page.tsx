@@ -10,8 +10,8 @@ export default function TermsPage() {
   return (
     <main className="flex-1 pt-32 pb-24">
       <Container className="max-w-3xl">
-        <h1 className="font-display text-4xl font-bold text-frost">Terms of Use</h1>
-        <p className="mt-6 text-sm leading-relaxed text-mist">
+        <h1 className="font-display text-4xl font-bold text-text">Terms of Use</h1>
+        <p className="mt-6 text-sm leading-relaxed text-muted">
           This page is a placeholder. Octhera&rsquo;s full terms of use, governing this
           website and engagement with our B2B services, will be published here.
         </p>
