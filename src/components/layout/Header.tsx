@@ -45,16 +45,16 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="group relative px-4 py-2 text-sm font-medium text-mist transition-colors duration-300 hover:text-frost"
+              className="group relative px-4 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:text-text"
             >
               {link.label}
-              <span className="absolute inset-x-4 -bottom-0.5 h-px scale-x-0 bg-gradient-to-r from-cyan to-violet transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="absolute inset-x-4 -bottom-0.5 h-px scale-x-0 bg-gradient-to-r from-primary to-secondary transition-transform duration-300 group-hover:scale-x-100" />
             </Link>
           ))}
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" variant="primary" className="px-5 py-2.5 text-xs">
+          <Button href="/#contact" variant="primary" className="px-5 py-2.5 text-xs">
             Contact Us
           </Button>
         </div>
@@ -64,7 +64,7 @@ export function Header() {
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-soft text-frost lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-text lg:hidden"
         >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -77,7 +77,7 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden border-b border-white/[0.06] bg-void/98 backdrop-blur-2xl lg:hidden"
+            className="overflow-hidden border-b border-white/[0.06] bg-background/98 backdrop-blur-2xl lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-6">
               {NAV_LINKS.map((link, i) => (
@@ -90,14 +90,14 @@ export function Header() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block rounded-lg px-3 py-3 text-base font-medium text-frost/90 transition-colors hover:bg-white/[0.04] hover:text-cyan-soft"
+                    className="block rounded-lg px-3 py-3 text-base font-medium text-text/90 transition-colors hover:bg-white/[0.04] hover:text-primary-soft"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
               <Button
-                href="#contact"
+                href="/#contact"
                 variant="primary"
                 className="mt-3 w-full justify-center"
                 onClick={() => setMobileOpen(false)}

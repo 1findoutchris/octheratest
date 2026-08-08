@@ -35,15 +35,15 @@ export function WhyOctheraDiagram() {
         ))}
         <defs>
           <linearGradient id="why-line-gradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="var(--color-cyan)" stopOpacity={0.8} />
-            <stop offset="100%" stopColor="var(--color-violet)" stopOpacity={0.1} />
+            <stop offset="0%" stopColor="var(--color-primary)" stopOpacity={0.8} />
+            <stop offset="100%" stopColor="var(--color-secondary)" stopOpacity={0.1} />
           </linearGradient>
         </defs>
       </svg>
 
-      <div className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan/30 bg-obsidian-2/90 shadow-[0_0_60px_-10px_rgba(46,230,200,0.5)]">
-        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan to-violet">
-          <span className="h-3 w-3 rounded-[3px] bg-void" />
+      <div className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary/30 bg-surface/90 shadow-[0_0_60px_-10px_rgb(from_var(--octhera-primary)_r_g_b/0.5)]">
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary">
+          <span className="h-3 w-3 rounded-[3px] bg-background" />
         </span>
       </div>
 
@@ -57,10 +57,10 @@ export function WhyOctheraDiagram() {
           className="absolute flex w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2 text-center"
           style={{ left: `${node.x}%`, top: `${node.y}%` }}
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-ink-soft bg-obsidian-2 text-cyan-soft">
+          <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface text-primary-soft">
             <node.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
           </span>
-          <span className="text-xs font-medium text-frost/90">{node.title}</span>
+          <span className="text-xs font-medium text-text/90">{node.title}</span>
         </motion.div>
       ))}
     </div>

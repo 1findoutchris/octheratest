@@ -5,14 +5,14 @@ import { cn } from "@/lib/utils";
 type ButtonVariant = "primary" | "secondary" | "ghost";
 
 const baseStyles =
-  "group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/60 focus-visible:ring-offset-2 focus-visible:ring-offset-void";
+  "group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-gradient-to-r from-cyan to-violet text-void shadow-[0_0_0_1px_rgba(46,230,200,0.25)] hover:shadow-[0_0_30px_-4px_rgba(46,230,200,0.55)] hover:-translate-y-0.5",
+    "bg-gradient-to-r from-primary to-secondary text-background shadow-[0_0_0_1px_rgb(from_var(--octhera-primary)_r_g_b/0.25)] hover:shadow-[0_0_30px_-4px_rgb(from_var(--octhera-primary)_r_g_b/0.55)] hover:-translate-y-0.5",
   secondary:
-    "border border-ink-soft bg-white/[0.03] text-frost backdrop-blur-sm hover:border-cyan/50 hover:bg-white/[0.06] hover:-translate-y-0.5",
-  ghost: "text-frost/80 hover:text-frost",
+    "border border-border bg-white/[0.03] text-text backdrop-blur-sm hover:border-primary/50 hover:bg-white/[0.06] hover:-translate-y-0.5",
+  ghost: "text-text/80 hover:text-text",
 };
 
 type ButtonProps = {

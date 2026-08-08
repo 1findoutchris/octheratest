@@ -14,8 +14,8 @@ const TABLE_ROWS = [
 ];
 
 const STATUS_STYLES: Record<string, string> = {
-  Completed: "text-cyan-soft bg-cyan/10 border-cyan/30",
-  Pending: "text-amber bg-amber/10 border-amber/30",
+  Completed: "text-primary-soft bg-primary/10 border-primary/30",
+  Pending: "text-accent bg-accent/10 border-accent/30",
 };
 
 export function DashboardMockup() {
@@ -29,8 +29,8 @@ export function DashboardMockup() {
               key={mod.label}
               className={`flex shrink-0 items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-medium whitespace-nowrap lg:whitespace-normal ${
                 i === 0
-                  ? "bg-white/[0.06] text-frost"
-                  : "text-mist hover:text-frost"
+                  ? "bg-white/[0.06] text-text"
+                  : "text-muted hover:text-text"
               }`}
             >
               <mod.icon className="h-4 w-4 shrink-0" strokeWidth={1.75} aria-hidden />
@@ -43,10 +43,10 @@ export function DashboardMockup() {
         <div className="flex-1 p-5 sm:p-7">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="font-display text-lg font-bold text-frost">Overview</p>
-              <p className="text-xs text-mist">Sample operator dashboard — illustrative data</p>
+              <p className="font-display text-lg font-bold text-text">Overview</p>
+              <p className="text-xs text-muted">Sample operator dashboard — illustrative data</p>
             </div>
-            <span className="rounded-full border border-cyan/30 bg-cyan/10 px-3 py-1 text-xs font-medium text-cyan-soft">
+            <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary-soft">
               Live preview
             </span>
           </div>
@@ -58,19 +58,19 @@ export function DashboardMockup() {
               { label: "Bet volume", value: "—" },
               { label: "Conversion", value: "—" },
             ].map((stat) => (
-              <div key={stat.label} className="rounded-xl border border-ink-soft bg-white/[0.02] p-3.5">
-                <p className="font-display text-xl font-bold text-frost">{stat.value}</p>
-                <p className="mt-1 text-[11px] text-mist">{stat.label}</p>
+              <div key={stat.label} className="rounded-xl border border-border bg-white/[0.02] p-3.5">
+                <p className="font-display text-xl font-bold text-text">{stat.value}</p>
+                <p className="mt-1 text-[11px] text-muted">{stat.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="mb-5 rounded-xl border border-ink-soft bg-white/[0.02] p-4 sm:p-5">
+          <div className="mb-5 rounded-xl border border-border bg-white/[0.02] p-4 sm:p-5">
             <div className="mb-3 flex items-center justify-between">
-              <p className="text-xs font-medium uppercase tracking-wider text-mist">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted">
                 Platform performance
               </p>
-              <span className="flex items-center gap-1 text-xs text-cyan-soft">
+              <span className="flex items-center gap-1 text-xs text-primary-soft">
                 <TrendingUp className="h-3.5 w-3.5" aria-hidden />
                 Sample trend
               </span>
@@ -90,17 +90,17 @@ export function DashboardMockup() {
               />
               <defs>
                 <linearGradient id="dashboard-line" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="var(--color-cyan)" />
-                  <stop offset="100%" stopColor="var(--color-violet)" />
+                  <stop offset="0%" stopColor="var(--color-primary)" />
+                  <stop offset="100%" stopColor="var(--color-secondary)" />
                 </linearGradient>
               </defs>
             </svg>
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-ink-soft">
+          <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-left text-xs">
               <thead>
-                <tr className="border-b border-ink-soft bg-white/[0.02] text-mist">
+                <tr className="border-b border-border bg-white/[0.02] text-muted">
                   <th className="px-4 py-2.5 font-medium">Transaction</th>
                   <th className="px-4 py-2.5 font-medium">Type</th>
                   <th className="px-4 py-2.5 font-medium">Status</th>
@@ -108,9 +108,9 @@ export function DashboardMockup() {
               </thead>
               <tbody>
                 {TABLE_ROWS.map((row) => (
-                  <tr key={row.id} className="border-b border-ink-soft/60 last:border-0">
-                    <td className="px-4 py-2.5 font-mono text-frost/80">{row.id}</td>
-                    <td className="px-4 py-2.5 text-frost/80">{row.type}</td>
+                  <tr key={row.id} className="border-b border-border/60 last:border-0">
+                    <td className="px-4 py-2.5 font-mono text-text/80">{row.id}</td>
+                    <td className="px-4 py-2.5 text-text/80">{row.type}</td>
                     <td className="px-4 py-2.5">
                       <span
                         className={`rounded-full border px-2 py-0.5 text-[10px] font-medium ${STATUS_STYLES[row.status]}`}

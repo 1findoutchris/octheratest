@@ -14,12 +14,12 @@ export function Introduction() {
             <SectionKicker>Why Octhera</SectionKicker>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-frost sm:text-5xl">
+            <h2 className="text-balance font-display text-4xl font-bold leading-[1.08] tracking-tight text-text sm:text-5xl">
               Build Your Gaming Business with Octhera
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
-            <p className="max-w-xl text-pretty text-base leading-relaxed text-mist sm:text-lg">
+            <p className="max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg">
               Octhera provides the technology and infrastructure companies need to build
               their own gaming brands — from platform architecture to content access,
               designed to move fast without compromising on control.
@@ -30,10 +30,10 @@ export function Introduction() {
             {INTRO_FEATURES.map((feature) => (
               <div
                 key={feature.title}
-                className="flex items-center gap-2.5 rounded-xl border border-ink-soft bg-white/[0.02] px-3.5 py-3"
+                className="flex items-center gap-2.5 rounded-xl border border-border bg-white/[0.02] px-3.5 py-3"
               >
-                <feature.icon className="h-4 w-4 shrink-0 text-cyan-soft" aria-hidden />
-                <span className="text-sm text-frost/90">{feature.title}</span>
+                <feature.icon className="h-4 w-4 shrink-0 text-primary-soft" aria-hidden />
+                <span className="text-sm text-text/90">{feature.title}</span>
               </div>
             ))}
           </Reveal>

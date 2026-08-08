@@ -9,7 +9,7 @@ import { Platform } from "@/components/sections/platform/Platform";
 import { Services } from "@/components/sections/Services";
 import { WhyOcthera } from "@/components/sections/why/WhyOcthera";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Partners } from "@/components/sections/Partners";
+import { FeaturedProviders } from "@/components/sections/FeaturedProviders";
 import { GlobalInfrastructure } from "@/components/sections/global/GlobalInfrastructure";
 import { FinalCta } from "@/components/sections/FinalCta";
 
@@ -27,7 +27,7 @@ export default function Home() {
       <Services />
       <WhyOcthera />
       <HowItWorks />
-      <Partners />
+      <FeaturedProviders />
       <GlobalInfrastructure />
       <FinalCta />
     </main>

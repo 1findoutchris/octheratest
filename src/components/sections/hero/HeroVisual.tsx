@@ -20,14 +20,14 @@ export function HeroVisual() {
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[560px]">
       {/* concentric rings */}
-      <div aria-hidden className="absolute inset-0 rounded-full border border-ink-soft/70" />
-      <div aria-hidden className="absolute inset-[13%] rounded-full border border-ink-soft/50" />
-      <div aria-hidden className="absolute inset-[27%] rounded-full border border-dashed border-ink-soft/40" />
+      <div aria-hidden className="absolute inset-0 rounded-full border border-border/70" />
+      <div aria-hidden className="absolute inset-[13%] rounded-full border border-border/50" />
+      <div aria-hidden className="absolute inset-[27%] rounded-full border border-dashed border-border/40" />
 
       {/* ambient glow */}
       <div
         aria-hidden
-        className="absolute inset-[18%] rounded-full bg-gradient-to-br from-cyan/25 via-violet/10 to-transparent blur-2xl"
+        className="absolute inset-[18%] rounded-full bg-gradient-to-br from-primary/25 via-secondary/10 to-transparent blur-2xl"
       />
 
       {/* rotating orbit group: lines + nodes */}
@@ -56,8 +56,8 @@ export function HeroVisual() {
           ))}
           <defs>
             <linearGradient id="octhera-line-gradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="var(--color-cyan)" stopOpacity={0.75} />
-              <stop offset="100%" stopColor="var(--color-violet)" stopOpacity={0.15} />
+              <stop offset="0%" stopColor="var(--color-primary)" stopOpacity={0.75} />
+              <stop offset="100%" stopColor="var(--color-secondary)" stopOpacity={0.15} />
             </linearGradient>
           </defs>
         </svg>
@@ -70,10 +70,10 @@ export function HeroVisual() {
             animate={shouldReduceMotion ? undefined : { rotate: -360 }}
             transition={{ duration: ORBIT_DURATION, repeat: Infinity, ease: "linear" }}
           >
-            <div className="glass-panel flex h-11 w-11 items-center justify-center rounded-xl text-cyan-soft shadow-lg sm:h-14 sm:w-14">
+            <div className="glass-panel flex h-11 w-11 items-center justify-center rounded-xl text-primary-soft shadow-lg sm:h-14 sm:w-14">
               <node.icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.75} aria-hidden />
             </div>
-            <span className="whitespace-nowrap rounded-full bg-void/70 px-2 py-0.5 text-[10px] font-medium tracking-wide text-mist sm:text-xs">
+            <span className="whitespace-nowrap rounded-full bg-background/70 px-2 py-0.5 text-[10px] font-medium tracking-wide text-muted sm:text-xs">
               {node.label}
             </span>
           </motion.div>
@@ -82,13 +82,13 @@ export function HeroVisual() {
 
       {/* central core */}
       <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
-        <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-cyan/30 bg-obsidian-2/90 shadow-[0_0_60px_-10px_rgba(46,230,200,0.5)] sm:h-28 sm:w-28">
+        <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-primary/30 bg-surface/90 shadow-[0_0_60px_-10px_rgb(from_var(--octhera-primary)_r_g_b/0.5)] sm:h-28 sm:w-28">
           <div
             aria-hidden
-            className="absolute inset-0 animate-pulse-soft rounded-full bg-gradient-to-br from-cyan/20 to-violet/20 blur-md"
+            className="absolute inset-0 animate-pulse-soft rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-md"
           />
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-cyan to-violet sm:h-10 sm:w-10">
-            <span className="h-3 w-3 rounded-[3px] bg-void" />
+          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary sm:h-10 sm:w-10">
+            <span className="h-3 w-3 rounded-[3px] bg-background" />
           </span>
         </div>
       </div>

@@ -4,6 +4,10 @@ import { SITE_TAGLINE } from "@/lib/site-config";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+// Satori (next/og's renderer) doesn't support CSS custom properties, so the
+// hex/rgba values below are duplicated from src/app/globals.css by hand.
+// Update them here too whenever the --octhera-* tokens change.
+
 export default function Image() {
   return new ImageResponse(
     (
