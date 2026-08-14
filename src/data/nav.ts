@@ -9,5 +9,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Products", href: "/#products" },
   { label: "Platform", href: "/#platform" },
   { label: "Providers", href: "/providers" },
+  { label: "Docs", href: "/docs" },
   { label: "About", href: "/#why-octhera" },
 ];
